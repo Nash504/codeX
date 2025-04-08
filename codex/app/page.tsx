@@ -42,14 +42,19 @@ export default function Home() {
         </h1>
         <div className="grid grid-cols-1 gap-10 py-8 md:grid-cols-2 lg:grid-cols-3">
           {siteConfig.project.map((item, key) => (
-            <Card key={key} className="max-w-[400px]">
+            <Card
+              key={key}
+              className="max-w-[400px] border-2 border-white shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out"
+            >
               <CardHeader className="flex gap-3">
                 <div className="flex flex-col">
-                  <p className="text-md">{item.title}</p>
-                  <p className="text-small text-default-500">{item.url}</p>
+                  <p className="text-2xl font-mono">{item.title}</p>
+                  <p className="text-md font-mono  text-default-500">
+                    {item.url}
+                  </p>
                 </div>
               </CardHeader>
-              <Divider />
+              <Divider className="bg-white" />
               <CardBody>
                 <p>{item.description}</p>
               </CardBody>

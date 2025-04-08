@@ -10,8 +10,8 @@ export default function Project() {
       <div className="p-5 mx-auto">
         <Image
           isZoomed
-          alt="Spatial Screenshot"
-          src="https://imgur.com/a/0ZB4y0B"
+          alt="ByteSize jpg"
+          src="https://i.imgur.com/TrWLy2D.png"
         />
       </div>
       <div className="space-y-4 ">
@@ -41,7 +41,7 @@ export default function Project() {
         </div>
 
         <p className="mt-4 text-xl">
-          <strong>Tech Stack:</strong> Next.js (Frontend), Tailwind CSS
+          <strong>Tech Stack:</strong> Next.js,Tailwind CSS,ShadCN
         </p>
 
         <p className="mt-4 text-xl">

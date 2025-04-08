@@ -34,7 +34,7 @@ export default function AboutPage() {
             width={300}
             radius="lg"
             className="  w-[300px] h-[300px] object-cover"
-            src="Deion.jpg"
+            src="deion.jpeg"
             alt="Deion"
           />
           <div>
