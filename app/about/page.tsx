@@ -49,6 +49,7 @@ export default function AboutPage() {
             </Card>
           </div>
         </div>
+
         <div className="flex flex-col gap-3 ">
           <Image
             width={300}
@@ -65,6 +66,27 @@ export default function AboutPage() {
               <Divider />
               <CardBody>
                 <p>Backend Developer - Javascript & Python</p>
+              </CardBody>
+            </Card>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-3 ">
+          <Image
+            width={300}
+            radius="lg"
+            className="  w-[300px] h-[300px] object-cover"
+            src="Roldan.jpg"
+            alt="Deion"
+          />
+          <div>
+            <Card>
+              <CardHeader>
+                <h1 className="text-xl font-semibold">Srijan K</h1>
+              </CardHeader>
+              <Divider />
+              <CardBody>
+                <p>Full Stack Developer - Javascript & Python</p>
               </CardBody>
             </Card>
           </div>
