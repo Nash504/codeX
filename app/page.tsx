@@ -21,18 +21,20 @@ export default function Home() {
         <br />
         <h1 className={title()}>
           {
-            <Typewriter
-              words={[
-                "Digital Excellence with Web and Flutter Apps",
-                "Your Imagination, Our Code",
-              ]}
-              loop={3}
-              cursor
-              cursorStyle="|"
-              typeSpeed={100}
-              deleteSpeed={50}
-              delaySpeed={1000}
-            />
+            <span className="font-mono">
+              <Typewriter
+                words={[
+                  "Digital Excellence with Web and Flutter Apps",
+                  "Your Imagination, Our Code",
+                ]}
+                loop={3}
+                cursor
+                cursorStyle="|"
+                typeSpeed={100}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </span>
           }
         </h1>
       </div>

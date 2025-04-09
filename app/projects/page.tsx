@@ -4,7 +4,12 @@ import Project from "@/components/project";
 export default function AboutPage() {
   return (
     <div className=" flex flex-col items-center">
-      <h1 className={title()}>Projects</h1>
+      <h1
+        className={title({ color: "violet" })}
+        style={{ paddingBottom: "2rem" }}
+      >
+        Projects
+      </h1>
       <div>
         <Project />{" "}
       </div>
