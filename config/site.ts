@@ -37,6 +37,10 @@ export const siteConfig = {
       label: "Projects",
       href: "/projects",
     },
+    {
+      label: "Contact Us",
+      href: "/contact",
+    },
   ],
   links: {
     github: "https://github.com/deiondz",
