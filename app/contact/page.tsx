@@ -1,3 +1,5 @@
+"use client";
+
 import { title } from "@/components/primitives";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import { Mail, Phone, Send } from "lucide-react";
@@ -83,12 +85,16 @@ async function onSubmit(formData: FormData): Promise<void> {
                 label="Name"
                 placeholder="Enter your name"
                 variant="bordered"
+                required
+                {...register("name")}
               />
               <Input
                 type="email"
                 label="Email"
                 placeholder="Enter your email"
                 variant="bordered"
+                required
+                {...register("email")}
               />
               <Input
                 type="tel"
@@ -101,10 +107,14 @@ async function onSubmit(formData: FormData): Promise<void> {
                 placeholder="How can we help you?"
                 variant="bordered"
                 minRows={4}
+                required
+                {...register("message")}
               />
               <Button
+              disabled={isSubmitting}
                 color="secondary"
                 className="mt-2 bg-violet-500 text-white"
+                type="submit"
               >
                 <Send size={18} className="mr-2" />
                 Send Message
