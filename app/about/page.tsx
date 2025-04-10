@@ -137,6 +137,17 @@ const teamMembers = [
       linkedin: "https://www.linkedin.com/in/srijan-kulal/",
     },
   },
+  {
+    name: "Nash Fernandes",
+    role: "Frontend Developer - React & NextJS",
+    image: "nash.jpg",
+    alt: "nash",
+    bio: "Building interactive and responsive web applications with a passion for clean code.",
+    socialLinks: {
+      github: "https://github.com/Nash504",
+      linkedin: "https://www.linkedin.com/in/nash-fernandes-b55b0b2b8/",
+    },
+  },
 ];
 
 export default function AboutPage() {
@@ -151,7 +162,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {teamMembers.map((member, index) => (
             <TeamMember key={index} {...member} />
           ))}
