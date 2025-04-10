@@ -45,7 +45,7 @@ const TeamMember = ({
       {bio && <p className="text-sm mt-2 text-default-600">{bio}</p>}
     </CardBody>
     <Divider />
-    <CardFooter className="gap-3 justify-center py-4">
+    {/* <CardFooter className="gap-3 justify-center py-4">
       {socialLinks?.github && (
         <Tooltip content="GitHub">
           <Button
@@ -88,7 +88,7 @@ const TeamMember = ({
           </Button>
         </Tooltip>
       )}
-    </CardFooter>
+    </CardFooter> */}
   </Card>
 );
 
