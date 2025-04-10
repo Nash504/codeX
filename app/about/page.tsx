@@ -33,7 +33,7 @@ const TeamMember = ({
       <div className="flex justify-center w-full">
         <Image
           radius="full"
-          className="w-96 h-72 object-cover border-4 border-content1"
+          className="w-fill h-52 object-fill "
           src={image}
           alt={alt}
         />
@@ -140,7 +140,7 @@ const teamMembers = [
   {
     name: "Nash Fernandes",
     role: "Frontend Developer - React & NextJS",
-    image: "nash.jpg",
+    image: "srijan.png",
     alt: "nash",
     bio: "Building interactive and responsive web applications with a passion for clean code.",
     socialLinks: {
