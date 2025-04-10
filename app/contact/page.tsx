@@ -6,7 +6,7 @@ import { Button } from "@nextui-org/button";
 
 export default function ContactPage() {
   return (
-    <div className="w-full max-w-6xl mx-auto px-6">
+    <div className="w-full max-w-6xl mx-auto px-6 font-mono">
       <div className="text-center mb-12">
         <h1 className={title({ color: "violet" })}>Contact Us</h1>
         <p className="text-lg text-default-600 mt-4">

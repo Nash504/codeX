@@ -60,18 +60,19 @@ export const Navbar = () => {
             <img src="/Logo-light.svg" className=" dark:hidden" alt="" />
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-8 justify-start ml-4  font-mono">
+        <ul className="hidden lg:flex gap-4 justify-start ml-4 text-xl font-mono ">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium "
+                  "data-[active=true]:text-primary data-[active=true]:font-medium relative group"
                 )}
                 color="foreground"
                 href={item.href}
               >
                 {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-violet-900  transition-all duration-300 group-hover:w-full"></span>
               </NextLink>
             </NavbarItem>
           ))}
@@ -82,12 +83,12 @@ export const Navbar = () => {
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden sm:flex gap-2">
+        <NavbarItem className="hidden sm:flex gap-2 ">
           <Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
-            <TwitterIcon className="text-default-500" />
+            <TwitterIcon className="text-gray-400     hover: text-grey-500 transform hover:scale-110 transition duration-300" />
           </Link>
           <Link isExternal href={siteConfig.links.discord} aria-label="Discord">
-            <DiscordIcon className="text-default-500" />
+            <DiscordIcon className="text-gray-400 hover: text-grey-500 transform hover:scale-110 transition duration-300" />
           </Link>
           <ThemeSwitch />
         </NavbarItem>

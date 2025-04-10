@@ -9,14 +9,14 @@ export const siteConfig = {
       label: "Home",
       href: "/",
     },
-    {
-      label: "About",
-      href: "/about",
-    },
 
     {
       label: "Projects",
       href: "/projects",
+    },
+    {
+      label: "About",
+      href: "/about",
     },
     {
       label: "Contact Us",
@@ -60,14 +60,14 @@ export const siteConfig = {
     {
       title: "Oasis Ticketing System",
       img: "https://media.licdn.com/dms/image/v2/D4D22AQF3Nep2-D0l9w/feedshare-shrink_2048_1536/B4DZVmS8ZlG8As-/0/1741177998477?e=1744243200&v=beta&t=-fP2gkrHUhHsrOnGBkrNR5HdEpwPeyVUGJYARINzfLQ",
-      url: "Next.js - Supabase - Clerk - Razorpay API",
+      url: "Nextjs - Supabase - Clerk - Razorpay API",
       description:
         "Oasis is a custom-built ticketing system designed to streamline TEDx event management by automating ticket sales, attendee data collection, and providing real-time insights. Developed using Next.js and Supabase, it replaces inefficient past methods and ensures a seamless experience for both organizers and attendees.",
       more: "/projects/Oasis",
     },
     {
       title: "Note Vault",
-      img: "NoteVault.svg",
+      img: "https://www.deiondz.in/project/notevault.png",
       url: "Next.js - Tailwind CSS - NextUI",
       description:
         "Note Vault is a user-friendly web application designed to serve as a centralized hub for storing and accessing college notes. Built using Next.js, Tailwind CSS, and the NextUI component library, it offers a seamless experience for students to organize and retrieve lecture notes, past papers, and study resources.",
@@ -76,7 +76,7 @@ export const siteConfig = {
     {
       title: "Spatial",
       img: "https://media.licdn.com/dms/image/v2/D4D22AQFRonsymukE0w/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1725474813462?e=1746057600&v=beta&t=1pIhW__g3wkOcQdAuNhqy9APogZ-34HeahYfDy_Q_f0",
-      url: "Next.js - Supabase - Flask - Raspberry Pi",
+      url: "Nextjs - Supabase - Flask - Raspberry Pi",
       description:
         "Spatial is a real-time crowd monitoring system that estimates the number of people on a bus using Bluetooth signals from nearby devices. The project aims to enhance public safety by preventing overcrowding incidents.",
       more: "/projects/Spatial",
@@ -87,6 +87,7 @@ export const siteConfig = {
       description:
         "ByteSize is an AI-powered flashcard generator that helps you study smarter. Just upload a document or paste some text, and it instantly creates flashcards using AI based on your content.",
       more: "/projects/ByteSize",
+      img: "https://i.imgur.com/TrWLy2D.png",
     },
   ],
 };

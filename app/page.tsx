@@ -11,15 +11,18 @@ import { Divider } from "@nextui-org/divider";
 import { GithubIcon } from "@/components/icons";
 import { Typewriter } from "react-simple-typewriter";
 import { Image } from "@nextui-org/image";
+import Project from "@/components/project";
 
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-2 py-8 md:py-10">
-      <div className="absolute justify-center inline-block max-w-lg text-center top-36 ">
-        <h1 className={title()}>Codex:&nbsp;</h1>
-        <h1 className={title({ color: "violet" })}>Crafting&nbsp;</h1>
+      <div className="font-mono absolute justify-center inline-block max-w-lg text-center top-36 ">
+        <h1 className={`${title()} font-inter`}>Codex:&nbsp;</h1>
+        <h1 className={`${title({ color: "violet" })} font-inter`}>
+          Crafting&nbsp;
+        </h1>
         <br />
-        <h1 className={title()}>
+        <h1 className={`${title()} font-inter`}>
           {
             <span className="font-mono">
               <Typewriter
@@ -42,33 +45,7 @@ export default function Home() {
         <h1 className={" font-bold text-center text-3xl"}>
           Check Out Our Projects
         </h1>
-        <div className="grid grid-cols-1 gap-10 py-8 md:grid-cols-2 lg:grid-cols-3">
-          {siteConfig.project.map((item, key) => (
-            <Card
-              key={key}
-              className="max-w-[400px] border-2 border-white shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out"
-            >
-              <CardHeader className="flex gap-3">
-                <div className="flex flex-col">
-                  <p className="text-2xl font-mono">{item.title}</p>
-                  <p className="text-md font-mono  text-default-500">
-                    {item.url}
-                  </p>
-                </div>
-              </CardHeader>
-              <Divider className="bg-white" />
-              <CardBody>
-                <p>{item.description}</p>
-              </CardBody>
-              <Divider />
-              <CardFooter>
-                <Link isExternal showAnchorIcon href={item.more}>
-                  Visit Documentation
-                </Link>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
+        <Project />
       </div>
     </section>
   );
