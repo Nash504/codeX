@@ -87,7 +87,7 @@ export const siteConfig = {
       description:
         "ByteSize is an AI-powered flashcard generator that helps you study smarter. Just upload a document or paste some text, and it instantly creates flashcards using AI based on your content.",
       more: "/projects/ByteSize",
-      img: "https://i.imgur.com/TrWLy2D.png",
+      img: "https://i.imgur.com/QXMp469.jpeg",
     },
   ],
 };
