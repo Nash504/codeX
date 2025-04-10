@@ -20,15 +20,15 @@ export default function Project() {
               </div>
             </CardHeader>
             <Divider className="bg-black" />
-            <CardBody className="flex flex-col items-center justify-center gap-2">
+            <CardBody className="flex flex-col items-center justify-center gap-2 h-300">
               <Image
                 className="hover:scale-105 transition-transform duration-300 ease-in-out border-2 border-black"
                 width={350}
-                height={100}
+                height={200}
                 alt=""
                 src={item.img}
                 onClick={() => window.open(item.more)}
-                style={{ cursor: "pointer" }}
+                style={{ cursor: "pointer", objectFit: "cover" }}
               />
             </CardBody>
             <Divider />
