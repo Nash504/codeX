@@ -60,7 +60,7 @@ export const Navbar = () => {
             <img src="/Logo-light.svg" className=" dark:hidden" alt="" />
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-4 text-xl font-mono ">
+        <ul className="hidden sm:flex gap-4 justify-start ml-4 text-xl font-mono ">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -124,8 +124,8 @@ export const Navbar = () => {
                   index === 2
                     ? "primary"
                     : index === siteConfig.navMenuItems.length - 1
-                    ? "danger"
-                    : "foreground"
+                      ? "danger"
+                      : "foreground"
                 }
                 href={item.href}
                 size="lg"
