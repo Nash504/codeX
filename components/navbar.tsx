@@ -63,13 +63,13 @@ export const Navbar = () => {
             <img src="/Logo-light.svg" className=" dark:hidden" alt="" />
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden sm:flex gap-8 justify-start  text-xl font-mono ">
+        <ul className="hidden sm:flex gap-8 justify-start  text-xl font-space-grotesk ">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium relative group pt-5 text-lg"
+                  "data-[active=true]:text-primary data-[active=true]:font-medium relative group pt-5 pb-2 text-lg"
                 )}
                 color="foreground"
                 href={item.href}

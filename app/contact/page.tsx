@@ -7,8 +7,7 @@ import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
-import {sendEmail} from "../../serverAction/sendMail";
-
+import { sendEmail } from "../../serverAction/sendMail";
 
 const ContactFormSchema = z.object({
   name: z.string().min(2).max(50),
@@ -20,49 +19,40 @@ export default function ContactPage() {
     name: string;
     email: string;
     message: string;
-};
+  };
 
-const {
+  const {
     register,
     handleSubmit,
     formState: { isSubmitting },
     reset,
-} = useForm<FormData>();
+  } = useForm<FormData>();
 
-interface EmailResponse {
+  interface EmailResponse {
     success: boolean;
-}
+  }
 
-async function onSubmit(formData: FormData): Promise<void> {
+  async function onSubmit(formData: FormData): Promise<void> {
     const validated = ContactFormSchema.safeParse(formData);
     if (!validated.success) {
-        console.log("Please fill in all the fields correctly.");
+      console.log("Please fill in all the fields correctly.");
     } else {
-
-        const value: EmailResponse = await sendEmail(
-            formData.name,
-            formData.message,
-            formData.email
-        );
-        if (value.success) {
-            
-            console.log("Your message has been sent successfully.");
-        } else {
-        
-          console.log("An error occurred while sending your message.");
-        }
+      const value: EmailResponse = await sendEmail(
+        formData.name,
+        formData.message,
+        formData.email
+      );
+      if (value.success) {
+        console.log("Your message has been sent successfully.");
+      } else {
+        console.log("An error occurred while sending your message.");
+      }
     }
     reset();
-}
-
-
-
-
-
-
+  }
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-6 font-mono">
+    <div className="w-full max-w-6xl mx-auto px-6 font-space-grotesk">
       <div className="text-center mb-12">
         <h1 className={title({ color: "violet" })}>Contact Us</h1>
         <p className="text-lg text-default-600 mt-4">
@@ -78,8 +68,10 @@ async function onSubmit(formData: FormData): Promise<void> {
             <p className="text-default-500">We'll get back to you soon.</p>
           </CardHeader>
           <CardBody className="py-5">
-            <form className="flex flex-col gap-4"
-              onSubmit={handleSubmit(onSubmit)}>
+            <form
+              className="flex flex-col gap-4"
+              onSubmit={handleSubmit(onSubmit)}
+            >
               <Input
                 type="text"
                 label="Name"
@@ -111,7 +103,7 @@ async function onSubmit(formData: FormData): Promise<void> {
                 {...register("message")}
               />
               <Button
-              disabled={isSubmitting}
+                disabled={isSubmitting}
                 color="secondary"
                 className="mt-2 bg-violet-500 text-white"
                 type="submit"

@@ -152,7 +152,7 @@ const teamMembers = [
 
 export default function AboutPage() {
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 -py-12 font-mono">
+    <div className="w-full max-w-7xl mx-auto px-4 -py-12 font-space-grotesk">
       <section className="mb-20">
         <div className="text-center mb-12">
           <h1 className={title({ color: "violet" })}>Meet Our Team</h1>

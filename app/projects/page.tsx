@@ -3,7 +3,7 @@ import Project from "@/components/project";
 
 export default function AboutPage() {
   return (
-    <div className=" flex flex-col items-center font-mono">
+    <div className=" flex flex-col items-center font-space-grotesk">
       <h1
         className={title({ color: "violet" })}
         style={{ paddingBottom: "2rem" }}
