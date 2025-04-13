@@ -52,21 +52,24 @@ export const Navbar = () => {
   );
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar className="bg-violet-500/10" maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
+          <NextLink
+            className="flex justify-start items-center gap-1 pt-6 pb-4 pr-12 -ml-12"
+            href="/"
+          >
             <img src="/Logo-dark.svg" className=" dark:block hidden " alt="" />
             <img src="/Logo-light.svg" className=" dark:hidden" alt="" />
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden sm:flex gap-4 justify-start ml-4 text-xl font-mono ">
+        <ul className="hidden sm:flex gap-8 justify-start  text-xl font-mono ">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium relative group"
+                  "data-[active=true]:text-primary data-[active=true]:font-medium relative group pt-5 text-lg"
                 )}
                 color="foreground"
                 href={item.href}
@@ -119,7 +122,7 @@ export const Navbar = () => {
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link href={item.href} size="lg">
+              <Link className="text-white" href={item.href} size="lg">
                 {item.label}
               </Link>
             </NavbarMenuItem>

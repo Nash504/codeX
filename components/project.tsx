@@ -12,17 +12,17 @@ export default function Project() {
         {siteConfig.project.map((item, key) => (
           <Card
             key={key}
-            className="max-w-[400px] border-4 border-black shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out"
+            className="max-w-[400px] bg-violet-500/10 border-4 border-violet-500 shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out"
           >
             <CardHeader className="flex gap-3">
               <div className="flex flex-col ">
                 <p className="text-2xl font-mono items-center">{item.title}</p>
               </div>
             </CardHeader>
-            <Divider className="bg-black" />
+            <Divider className="bg-violet-500" />
             <CardBody className="flex flex-col items-center justify-center gap-2 h-300">
               <Image
-                className="hover:scale-105 transition-transform duration-300 ease-in-out border-2 border-black"
+                className="hover:scale-105 transition-transform duration-300 ease-in-out border-2 border-violet-500"
                 width={350}
                 height={200}
                 alt=""
