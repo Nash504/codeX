@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 import Project from "@/components/project";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { FiChevronDown } from "react-icons/fi"; // Import a down arrow icon
+// Import a down arrow icon
 
 const sloganVariants = {
   initial: { opacity: 0, y: 10 },
@@ -88,7 +88,7 @@ export default function Home() {
               initial="initial"
               animate={isMounted ? "animate" : "initial"}
             >
-              Explore Our Recent Work <FiChevronDown /> {/* Added the icon */}
+              Explore Our Recent Work {/* Added the icon */}
             </motion.h2>
             <Project />
           </motion.div>
