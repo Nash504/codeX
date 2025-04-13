@@ -1,7 +1,9 @@
+/* globals.css */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* width */
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -19,4 +21,27 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src:
+    url("/fonts/space-grotesk/SpaceGrotesk-Regular.woff2") format("woff2"),
+    url("/fonts/space-grotesk/SpaceGrotesk-Regular.woff") format("woff"),
+    url("/fonts/space-grotesk/SpaceGrotesk-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Define other weights if needed (e.g., bold) */
+@font-face {
+  font-family: "Space Grotesk";
+  src:
+    url("/fonts/space-grotesk/SpaceGrotesk-Bold.woff2") format("woff2"),
+    url("/fonts/space-grotesk/SpaceGrotesk-Bold.woff") format("woff"),
+    url("/fonts/space-grotesk/SpaceGrotesk-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }

@@ -56,7 +56,7 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink
-            className="flex justify-start items-center gap-1 pt-6 pb-4 pr-12 -ml-4"
+            className="flex justify-start items-center gap-1 pt-6 pb-4 pr-12 -ml-2"
             href="/"
           >
             <img src="/Logo-dark.svg" className=" dark:block hidden " alt="" />
