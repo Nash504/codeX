@@ -10,7 +10,6 @@ import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
 import { GithubIcon } from "@/components/icons";
 import { Typewriter } from "react-simple-typewriter";
-import { Image } from "@nextui-org/image";
 import Project from "@/components/project";
 
 export default function Home() {
