@@ -28,33 +28,24 @@ const TeamMember = ({
   bio,
   socialLinks,
 }: TeamMemberProps) => (
-  <Card className="border border-gray-200 hover:shadow-lg transition-all duration-300 overflow-hidden font-mono rounded-md">
+  <Card className="border-violet-500 border-1 hover:shadow-xl transition-all duration-300 overflow-hidden font-mono">
     <CardHeader className="pb-0 pt-6 px-6 flex-col items-start">
-      <div className="relative flex justify-center w-full overflow-hidden rounded-full">
+      <div className="flex justify-center w-full">
         <Image
           radius="full"
-          className="w-full h-52 object-cover transition-transform duration-300 hover:scale-105"
+          className="w-fill h-52 object-fill "
           src={image}
           alt={alt}
         />
-        {/* Optional: Image overlay on hover */}
-        {/* <div className="absolute inset-0 bg-violet-500 opacity-0 hover:opacity-20 transition-opacity duration-300 rounded-full"></div> */}
       </div>
     </CardHeader>
     <CardBody className="text-center py-4">
       <h3 className="text-xl font-bold">{name}</h3>
       <p className="text-default-500 text-sm mb-2 font-semibold">{role}</p>
-      {bio && (
-        <p className="text-sm mt-2 text-default-600 leading-relaxed">{bio}</p>
-      )}
-      {/* Optional: Skills display */}
-      {/* <div className="mt-3 flex justify-center gap-2">
-        <span className="bg-gray-100 text-gray-600 text-xs py-1 px-2 rounded-full">React</span>
-        <span className="bg-gray-100 text-gray-600 text-xs py-1 px-2 rounded-full">Node.js</span>
-      </div> */}
+      {bio && <p className="text-sm mt-2 text-default-600">{bio}</p>}
     </CardBody>
     <Divider />
-    <CardFooter className="gap-3 justify-center py-4">
+    {/* <CardFooter className="gap-3 justify-center py-4">
       {socialLinks?.github && (
         <Tooltip content="GitHub">
           <Button
@@ -83,10 +74,21 @@ const TeamMember = ({
           </Button>
         </Tooltip>
       )}
-
-      {/* Optional: View Profile Button */}
-      {/* <Button color="primary" size="sm">View Profile</Button> */}
-    </CardFooter>
+      {socialLinks?.twitter && (
+        <Tooltip content="Twitter">
+          <Button
+            isIconOnly
+            size="sm"
+            variant="flat"
+            as={Link}
+            href={socialLinks.twitter}
+            target="_blank"
+          >
+            <FaTwitter className="text-lg" />
+          </Button>
+        </Tooltip>
+      )}
+    </CardFooter> */}
   </Card>
 );
 
@@ -150,7 +152,7 @@ const teamMembers = [
 
 export default function AboutPage() {
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-12 font-space-grotesk">
+    <div className="w-full max-w-7xl mx-auto px-4 -py-12 font-space-grotesk">
       <section className="mb-20">
         <div className="text-center mb-12">
           <h1 className={title({ color: "violet" })}>Meet Our Team</h1>
@@ -160,7 +162,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {teamMembers.map((member, index) => (
             <TeamMember key={index} {...member} />
           ))}
