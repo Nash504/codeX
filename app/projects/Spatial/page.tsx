@@ -8,11 +8,7 @@ export default function Project() {
         Project - Spatial
       </h1>
       <div className="p-5 mx-auto">
-        <Image
-          isZoomed
-          alt="Spatial Screenshot"
-          src="https://media.licdn.com/dms/image/v2/D4D22AQFRonsymukE0w/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1725474813462?e=1746057600&v=beta&t=1pIhW__g3wkOcQdAuNhqy9APogZ-34HeahYfDy_Q_f0"
-        />
+        <Image isZoomed alt="Spatial Screenshot" src="spatial.jpeg" />
       </div>
       <div className="space-y-4 ">
         <p className="text-2xl font-semibold">

@@ -75,7 +75,7 @@ export const siteConfig = {
     },
     {
       title: "Spatial",
-      img: "https://media.licdn.com/dms/image/v2/D4D22AQFRonsymukE0w/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1725474813462?e=1746057600&v=beta&t=1pIhW__g3wkOcQdAuNhqy9APogZ-34HeahYfDy_Q_f0",
+      img: "spatial.jpeg",
       url: "Nextjs - Supabase - Flask - Raspberry Pi",
       description:
         "Spatial is a real-time crowd monitoring system that estimates the number of people on a bus using Bluetooth signals from nearby devices. The project aims to enhance public safety by preventing overcrowding incidents.",
