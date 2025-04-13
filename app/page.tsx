@@ -37,7 +37,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="font-space-grotesk">
+    <div className="font-space-grotesk p-0">
       <section className="flex flex-col items-center justify-center min-h-[80vh] py-16 md:py-24 bg-gradient-to-b from-background to-background/80">
         <div className="max-w-6xl mx-auto text-center px-6">
           <div className="space-y-8 mb-12">
