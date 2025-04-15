@@ -184,7 +184,11 @@ export default function AboutPage() {
     <div className="w-full max-w-7xl mx-auto px-4 -py-12 font-space-grotesk">
       <section className="mb-20">
         <div className="text-center mb-12">
-          <h1 className={title({ color: "violet" })}>Meet Our Team</h1>
+          <h1
+            className={`${title()} text-5xl md:text-6xl lg:text-7xl font-thin  text-white`}
+          >
+            Meet Our Team
+          </h1>
           <p className="text-default-500 max-w-2xl mx-auto mt-4">
             We're a passionate group of developers committed to building
             innovative solutions that make a difference.

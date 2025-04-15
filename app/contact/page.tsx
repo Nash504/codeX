@@ -54,7 +54,11 @@ export default function ContactPage() {
   return (
     <div className="w-full max-w-6xl mx-auto px-6 font-space-grotesk">
       <div className="text-center mb-12">
-        <h1 className={title({ color: "violet" })}>Contact Us</h1>
+        <h1
+          className={`${title()} text-5xl md:text-6xl lg:text-7xl font-thin  text-white`}
+        >
+          Contact Us
+        </h1>
         <p className="text-lg text-default-600 mt-4">
           We'd love to hear from you. Fill out the form below or use our contact
           information.
