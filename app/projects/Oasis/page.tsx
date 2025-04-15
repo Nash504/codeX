@@ -7,11 +7,7 @@ export default function Project() {
         Project - Oasis Ticketing System
       </h1>
       <div className="mx-auto ">
-        <Image
-          isZoomed
-          alt="BinSense Dashboard"
-          src="https://media.licdn.com/dms/image/v2/D4D22AQF3Nep2-D0l9w/feedshare-shrink_2048_1536/B4DZVmS8ZlG8As-/0/1741177998477?e=1744243200&v=beta&t=-fP2gkrHUhHsrOnGBkrNR5HdEpwPeyVUGJYARINzfLQ"
-        />
+        <Image isZoomed alt="BinSense Dashboard" src="oasis.jpeg" />
       </div>
 
       <div className="mx-auto space-y-4 ">
