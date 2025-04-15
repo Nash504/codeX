@@ -18,6 +18,7 @@ interface TeamMemberProps {
     linkedin?: string;
     twitter?: string;
   };
+  cardColor?: string;
 }
 
 const TeamMember = ({
@@ -27,8 +28,11 @@ const TeamMember = ({
   alt,
   bio,
   socialLinks,
+  cardColor = "bg-gradient-to-br from-black via-gray-900 to-violet-950/70 border-2 border-violet-900/30",
 }: TeamMemberProps) => (
-  <Card className="border-violet-500 border-1 hover:shadow-xl transition-all duration-300 overflow-hidden font-mono">
+  <Card
+    className={` hover:shadow-xl transition-all duration-300 overflow-hidden font-mono ${cardColor}`}
+  >
     <CardHeader className="pb-0 pt-6 px-6 flex-col items-start">
       <div className="flex justify-center w-full">
         <Image
@@ -142,6 +146,28 @@ const teamMembers = [
   },
   {
     name: "Nash Fernandes",
+    role: "Frontend Developer - React & NextJS",
+    image: "srijan.jpg",
+    alt: "nash",
+    bio: "Building interactive and responsive web applications with a passion for clean code.",
+    socialLinks: {
+      github: "https://github.com/Nash504",
+      linkedin: "https://www.linkedin.com/in/nash-fernandes-b55b0b2b8/",
+    },
+  },
+  {
+    name: "Sion Lobo",
+    role: "Frontend Developer - React & NextJS",
+    image: "srijan.jpg",
+    alt: "nash",
+    bio: "Building interactive and responsive web applications with a passion for clean code.",
+    socialLinks: {
+      github: "https://github.com/Nash504",
+      linkedin: "https://www.linkedin.com/in/nash-fernandes-b55b0b2b8/",
+    },
+  },
+  {
+    name: "Vinish Machado",
     role: "Frontend Developer - React & NextJS",
     image: "srijan.jpg",
     alt: "nash",

@@ -93,7 +93,6 @@ export const Navbar = () => {
           <Link isExternal href={siteConfig.links.discord} aria-label="Discord">
             <DiscordIcon className="text-gray-400 hover: text-grey-500 transform hover:scale-110 transition duration-300" />
           </Link>
-          <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className="hidden md:flex">
           <Button
