@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 import Project from "@/components/project";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, SpadeIcon } from "lucide-react";
 
 const sloganVariants = {
   initial: { opacity: 0, y: 10 },
@@ -45,9 +45,9 @@ export default function Home() {
 
   return (
     <div className="font-space-grotesk p-0">
-      <section className="flex flex-col items-center justify-center min-h-screen py-16 md:py-24 relative">
-        <div className="max-w-6xl mx-auto text-center px-6">
-          <div className="space-y-8 mb-12">
+      <section className="flex flex-col items-center justify-center min-h-screen py-8 md:py-16 relative">
+        <div className="max-w-6xl text-center px-6 mt-[-50px] md:mt-[-120px]">
+          <div className="space-y-6 mb-8">
             <div className="flex items-center justify-center">
               <motion.h1
                 variants={sloganVariants}
@@ -55,19 +55,24 @@ export default function Home() {
                 animate={isMounted ? "animate" : "initial"}
                 className={`${title()} text-7xl md:text-8xl lg:text-9xl tracking-tight`}
               >
-                Codex:
+                Code
+                <span
+                  className={`${title({ color: "violet" })}  text-7xl md:text-8xl lg:text-9xl tracking-tight`}
+                >
+                  X
+                </span>
               </motion.h1>
             </div>
             <motion.h2
-              className={`${title({ color: "violet" })} text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-tight`}
+              className={`${title()} text-5xl md:text-6xl lg:text-7xl font-thin tracking-tight leading-tight text-white`}
               variants={sloganVariants}
               initial="initial"
               animate={isMounted ? "animate" : "initial"}
             >
               Crafting Excellence
             </motion.h2>
-            <div className="h-24 mt-8">
-              <h3 className="text-3xl md:text-4xl font-semibold text-gray-100">
+            <div className="h-24 mt-4">
+              <h3 className="text-3xl md:text-4xl font-thin text-gray-100">
                 <Typewriter
                   words={[
                     "Digital Excellence with Web and Flutter Apps",

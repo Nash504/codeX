@@ -12,7 +12,7 @@ export const footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-gray-950 to-black pt-10 pb-6">
+    <footer className="bg-gradient-to-b from-gray-950 to-black pt-10 pb-6 font-space-grotesk">
       <Divider className="opacity-40" />
       <div className="container mx-auto px-4 mt-4">
         {/* Top section with logo and quick links */}
