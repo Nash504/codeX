@@ -59,7 +59,7 @@ export const siteConfig = {
     },
     {
       title: "Oasis Ticketing System",
-      img: "https://media.licdn.com/dms/image/v2/D4D22AQF3Nep2-D0l9w/feedshare-shrink_2048_1536/B4DZVmS8ZlG8As-/0/1741177998477?e=1744243200&v=beta&t=-fP2gkrHUhHsrOnGBkrNR5HdEpwPeyVUGJYARINzfLQ",
+      img: "oasis.jpeg",
       url: "Nextjs - Supabase - Clerk - Razorpay API",
       description:
         "Oasis is a custom-built ticketing system designed to streamline TEDx event management by automating ticket sales, attendee data collection, and providing real-time insights. Developed using Next.js and Supabase, it replaces inefficient past methods and ensures a seamless experience for both organizers and attendees.",

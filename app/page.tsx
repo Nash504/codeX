@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 import Project from "@/components/project";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-// Import a down arrow icon
+import { ChevronDown } from "lucide-react";
 
 const sloganVariants = {
   initial: { opacity: 0, y: 10 },
@@ -36,9 +36,16 @@ export default function Home() {
     setIsMounted(true);
   }, []);
 
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById("projects-section");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="font-space-grotesk p-0">
-      <section className="flex flex-col items-center justify-center min-h-[80vh] py-16 md:py-24 bg-gradient-to-b from-background to-background/80">
+      <section className="flex flex-col items-center justify-center min-h-screen py-16 md:py-24 relative">
         <div className="max-w-6xl mx-auto text-center px-6">
           <div className="space-y-8 mb-12">
             <div className="flex items-center justify-center">
@@ -60,7 +67,7 @@ export default function Home() {
               Crafting Excellence
             </motion.h2>
             <div className="h-24 mt-8">
-              <h3 className="text-3xl md:text-4xl font-semibold">
+              <h3 className="text-3xl md:text-4xl font-semibold text-gray-100">
                 <Typewriter
                   words={[
                     "Digital Excellence with Web and Flutter Apps",
@@ -76,23 +83,35 @@ export default function Home() {
               </h3>
             </div>
           </div>
+
           <motion.div
-            className="mt-20"
-            variants={projectsTitleVariants}
+            className="absolute bottom-16 left-0 right-0 flex justify-center cursor-pointer"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+            onClick={scrollToProjects}
+          >
+            <ChevronDown size={36} className="text-violet-400/80" />
+          </motion.div>
+        </div>
+      </section>
+
+      <section id="projects-section" className="py-20">
+        <motion.div
+          className="max-w-6xl mx-auto px-6"
+          variants={projectsTitleVariants}
+          initial="initial"
+          animate={isMounted ? "animate" : "initial"}
+        >
+          <motion.h2
+            className="text-4xl font-bold flex items-center justify-center gap-2 mb-12"
+            variants={eyeCatchingProjectsTitle}
             initial="initial"
             animate={isMounted ? "animate" : "initial"}
           >
-            <motion.h2
-              className="text-4xl font-bold flex items-center justify-center gap-2" // Added flex and gap
-              variants={eyeCatchingProjectsTitle}
-              initial="initial"
-              animate={isMounted ? "animate" : "initial"}
-            >
-              Explore Our Recent Work {/* Added the icon */}
-            </motion.h2>
-            <Project />
-          </motion.div>
-        </div>
+            Explore Our Recent Work
+          </motion.h2>
+          <Project />
+        </motion.div>
       </section>
     </div>
   );

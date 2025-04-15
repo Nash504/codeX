@@ -40,10 +40,13 @@ const TeamMember = ({
       </div>
     </CardHeader>
     <CardBody className="text-center py-4">
+      <Divider className="bg-violet-500 mb-2" />
       <h3 className="text-xl font-bold">{name}</h3>
       <p className="text-default-500 text-sm mb-2 font-semibold">{role}</p>
+
       {bio && <p className="text-sm mt-2 text-default-600">{bio}</p>}
     </CardBody>
+
     <Divider />
     {/* <CardFooter className="gap-3 justify-center py-4">
       {socialLinks?.github && (
