@@ -14,7 +14,6 @@ export default function Project() {
         </h1>
         <div className="mx-auto ">
           <Image
-            isZoomed
             alt="BinSense Dashboard"
             src="https://www.upwork.com/att/download/portfolio/persons/uid/964929488448684032/profile/projects/files/84851d89-9003-43f7-b631-f460891e90ad"
           />

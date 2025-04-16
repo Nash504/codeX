@@ -15,7 +15,6 @@ export default function Project() {
       </h1>
       <div className="mx-auto ">
         <Image
-          isZoomed
           alt="Note Vault Interface"
           src="https://www.deiondz.in/project/notevault.png"
         />

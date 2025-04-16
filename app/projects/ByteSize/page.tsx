@@ -14,11 +14,7 @@ export default function Project() {
         Project - ByteSize
       </h1>
       <div className="p-5 mx-auto">
-        <Image
-          isZoomed
-          alt="ByteSize jpg"
-          src="https://i.imgur.com/TrWLy2D.png"
-        />
+        <Image alt="ByteSize jpg" src="https://i.imgur.com/TrWLy2D.png" />
       </div>
       <div className="space-y-4 ">
         <p className="text-2xl font-semibold">

@@ -32,7 +32,7 @@ export default function Project() {
                 height={200}
                 alt={item.title}
                 src={item.img}
-                onClick={() => window.open(item.more)}
+                onClick={() => (window.location.href = item.more)}
                 style={{ cursor: "pointer", objectFit: "cover" }}
               />
             </CardBody>

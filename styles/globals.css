@@ -7,18 +7,34 @@
 ::-webkit-scrollbar {
   width: 5px;
 }
+/* Thin scrollbar width for vertical */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Thin scrollbar height for horizontal */
+::-webkit-scrollbar:horizontal {
+  height: 5px;
+}
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: black;
 }
 
-/* Handle */
+/* Tiny vertical scrollbar thumb */
 ::-webkit-scrollbar-thumb {
   background: #888;
+  border-radius: 9999px;
+  min-height: 20px; /* This makes the thumb short */
 }
 
-/* Handle on hover */
+/* Tiny horizontal scrollbar thumb */
+::-webkit-scrollbar-thumb:horizontal {
+  min-width: 20px; /* This makes it short horizontally */
+}
+
+/* On hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
