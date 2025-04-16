@@ -52,7 +52,7 @@ const TeamMember = ({
     </CardBody>
 
     <Divider />
-    {/* <CardFooter className="gap-3 justify-center py-4">
+    <CardFooter className="gap-3 justify-center py-4">
       {socialLinks?.github && (
         <Tooltip content="GitHub">
           <Button
@@ -95,7 +95,7 @@ const TeamMember = ({
           </Button>
         </Tooltip>
       )}
-    </CardFooter> */}
+    </CardFooter>
   </Card>
 );
 
@@ -105,7 +105,7 @@ const teamMembers = [
     role: "Python - C developer",
     image: "john.jpg",
     alt: "Johnathan",
-    bio: "Specializes in high-performance systems and algorithmic optimization",
+    bio: "Expert in crafting efficient algorithms and optimizing system performance.",
     socialLinks: {
       github: "https://github.com/TheJonathanC",
       linkedin: "https://www.linkedin.com/in/jonathan-correa-a41093278/",
@@ -116,7 +116,7 @@ const teamMembers = [
     role: "Frontend Developer - React & NextJS",
     image: "deion.jpeg",
     alt: "Deion",
-    bio: "UI/UX enthusiast with a passion for creating seamless user experiences",
+    bio: "Passionate about designing intuitive interfaces and enhancing user engagement.",
     socialLinks: {
       github: "https://github.com/deiondz",
       linkedin: "https://linkedin.com/in/deion",
@@ -127,7 +127,7 @@ const teamMembers = [
     role: "Backend Developer - Javascript & Python",
     image: "Roldan.jpg",
     alt: "Roldan",
-    bio: "Database expert focused on scalable architecture and API development",
+    bio: "Specialist in building robust APIs and managing complex database systems.",
     socialLinks: {
       github: "https://github.com/shadow1951",
       linkedin: "https://linkedin.com/in/roldan",
@@ -138,7 +138,7 @@ const teamMembers = [
     role: "Full Stack Developer - Javascript & Python",
     image: "srijan.jpg",
     alt: "Srijan",
-    bio: "End-to-end developer with expertise in cloud infrastructure",
+    bio: "Combines full-stack expertise with a deep understanding of cloud technologies.",
     socialLinks: {
       github: "https://github.com/srijankulal",
       linkedin: "https://www.linkedin.com/in/srijan-kulal/",
@@ -147,9 +147,9 @@ const teamMembers = [
   {
     name: "Nash Fernandes",
     role: "Frontend Developer - React & NextJS",
-    image: "srijan.jpg",
+    image: "nash.jpg",
     alt: "nash",
-    bio: "Building interactive and responsive web applications with a passion for clean code.",
+    bio: "Focused on creating dynamic and visually appealing web applications.",
     socialLinks: {
       github: "https://github.com/Nash504",
       linkedin: "https://www.linkedin.com/in/nash-fernandes-b55b0b2b8/",
@@ -158,23 +158,21 @@ const teamMembers = [
   {
     name: "Sion Lobo",
     role: "Frontend Developer - React & NextJS",
-    image: "srijan.jpg",
-    alt: "nash",
-    bio: "Building interactive and responsive web applications with a passion for clean code.",
+    image: "sion.jpg",
+    alt: "sion",
+    bio: "Dedicated to delivering seamless and responsive user experiences.",
     socialLinks: {
-      github: "https://github.com/Nash504",
-      linkedin: "https://www.linkedin.com/in/nash-fernandes-b55b0b2b8/",
+      github: "http://github.com/sionnn9",
     },
   },
   {
     name: "Vinish Machado",
     role: "Frontend Developer - React & NextJS",
-    image: "srijan.jpg",
+    image: "vinish.jpg",
     alt: "nash",
-    bio: "Building interactive and responsive web applications with a passion for clean code.",
+    bio: "Enthusiastic about writing clean, maintainable, and efficient code.",
     socialLinks: {
-      github: "https://github.com/Nash504",
-      linkedin: "https://www.linkedin.com/in/nash-fernandes-b55b0b2b8/",
+      github: "https://github.com/VinshMachado",
     },
   },
 ];

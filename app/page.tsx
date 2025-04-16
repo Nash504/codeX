@@ -1,27 +1,27 @@
 "use client";
-import { title } from "@/components/primitives";
-import { Typewriter } from "react-simple-typewriter";
-import Project from "@/components/project";
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import { ChevronDown } from "lucide-react";
 
-const sloganVariants = {
-  initial: { opacity: 0, y: 10 },
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import dynamic from "next/dynamic";
+
+import { title } from "@/components/primitives";
+import Project from "@/components/project";
+
+// Dynamically import typewriter
+const Typewriter = dynamic(
+  () => import("react-simple-typewriter").then((mod) => mod.Typewriter),
+  { ssr: false }
+);
+
+// Animation variants
+const fadeUp = {
+  initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-const projectsTitleVariants = {
-  initial: { opacity: 0, y: 20 },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, delay: 0.2, ease: "easeOut" },
-  },
-};
-
-const eyeCatchingProjectsTitle = {
-  initial: { scale: 0.9, opacity: 0 },
+const zoomIn = {
+  initial: { scale: 0.95, opacity: 0 },
   animate: {
     scale: 1,
     opacity: 1,
@@ -37,83 +37,82 @@ export default function Home() {
   }, []);
 
   const scrollToProjects = () => {
-    const projectsSection = document.getElementById("projects-section");
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: "smooth" });
-    }
+    const section = document.getElementById("projects-section");
+    section?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <div className="font-space-grotesk p-0">
-      <section className="flex flex-col items-center justify-center min-h-screen py-8 md:py-16 relative">
-        <div className="max-w-6xl text-center px-6">
-          <div className="space-y-4 mb-8">
-            {" "}
-            {/* Reduced space-y */}
-            <div className="flex items-center -mt-60 justify-center">
-              <motion.h1
-                variants={sloganVariants}
-                initial="initial"
-                animate={isMounted ? "animate" : "initial"}
-                className={`${title()} text-7xl md:text-8xl lg:text-9xl tracking-tight`}
-              >
-                Code
-                <span
-                  className={`${title({ color: "violet" })}  text-7xl md:text-8xl lg:text-9xl tracking-tight`}
-                >
-                  X
-                </span>
-              </motion.h1>
-            </div>
-            <motion.h2
-              className={`${title()} text-5xl md:text-6xl lg:text-7xl font-thin tracking-tight leading-tight text-white`}
-              variants={sloganVariants}
-              initial="initial"
-              animate={isMounted ? "animate" : "initial"}
+    <div className="font-space-grotesk text-white">
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center">
+        <div className="max-w-6xl w-full ">
+          <motion.h1
+            className={`${title()} text-7xl md:text-8xl lg:text-9xl tracking-tight`}
+            variants={fadeUp}
+            initial="initial"
+            animate={isMounted ? "animate" : "initial"}
+          >
+            Code
+            <span
+              className={`${title({ color: "violet" })} ml-2 text-7xl md:text-8xl lg:text-9xl tracking-tight`}
             >
-              Crafting Excellence
-            </motion.h2>
-            <div className="h-20 mt-2">
-              {" "}
-              {/* Reduced h and mt */}
-              <h3 className="text-3xl md:text-4xl font-thin text-gray-100">
-                <Typewriter
-                  words={[
-                    "Digital Excellence with Web and Flutter Apps",
-                    "<Your Imagination, Our Code>",
-                  ]}
-                  loop={3}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={100}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                />
-              </h3>
-            </div>
-          </div>
-
+              X
+            </span>
+          </motion.h1>
+          <br />
+          <motion.h2
+            className={`${title()} text-4xl md:text-5xl lg:text-6xl font-light tracking-tight`}
+            variants={fadeUp}
+            initial="initial"
+            animate={isMounted ? "animate" : "initial"}
+          >
+            Crafting Excellence
+          </motion.h2>
           <motion.div
-            className=" left-0 right-0 flex justify-center cursor-pointer "
+            className="text-xl md:text-2xl text-gray-300 h-20 py-12"
+            variants={fadeUp}
+            initial="initial"
+            animate={isMounted ? "animate" : "initial"}
+          >
+            <Typewriter
+              words={[
+                "Digital Excellence with Web and Flutter Apps",
+                "<Your Imagination, Our Code>",
+              ]}
+              loop={Infinity}
+              cursor
+              cursorStyle="|"
+              typeSpeed={80}
+              deleteSpeed={40}
+              delaySpeed={1000}
+            />
+          </motion.div>
+          <motion.div
+            className="mt-10 flex flex-col items-center cursor-pointer"
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
             onClick={scrollToProjects}
+            aria-label="Scroll to projects"
           >
+            <p className="text-sm text-gray-400 mb-1 animate-pulse">
+              See Projects
+            </p>
             <ChevronDown size={36} className="text-violet-400/80" />
           </motion.div>
         </div>
       </section>
 
-      <section id="projects-section">
+      {/* Projects Section */}
+      <section id="projects-section" className="py-20">
         <motion.div
-          className="max-w-6xl mx-auto px-6 "
-          variants={projectsTitleVariants}
+          className="max-w-6xl mx-auto"
+          variants={fadeUp}
           initial="initial"
           animate={isMounted ? "animate" : "initial"}
         >
           <motion.h2
-            className="text-4xl font-bold flex items-center justify-center gap-2 mb-8 "
-            variants={eyeCatchingProjectsTitle}
+            className="text-4xl font-bold text-center mb-12"
+            variants={zoomIn}
             initial="initial"
             animate={isMounted ? "animate" : "initial"}
           >
