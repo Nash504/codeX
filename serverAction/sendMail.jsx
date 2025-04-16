@@ -1,4 +1,4 @@
-'use server';
+"use server";
 
 import { Resend } from "resend";
 
@@ -8,12 +8,10 @@ export async function sendEmail(name, message, email) {
   try {
     const data = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: ["gmail.com"],
+      to: ["nashdfern@gmail.com"],
       subject: `New Message from ${name}!`,
       html: `<p>${message}</p>`,
       replyTo: email,
-      
-      
     });
     return { success: true, data };
   } catch (error) {
