@@ -5,7 +5,8 @@ import { Image } from "@nextui-org/image";
 import { Button } from "@nextui-org/button";
 import { Tooltip } from "@nextui-org/tooltip";
 import { Link } from "@nextui-org/link";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+
+import { TwitterIcon, GithubIcon } from "@/components/icons";
 
 interface TeamMemberProps {
   name: string;
@@ -63,35 +64,7 @@ const TeamMember = ({
             href={socialLinks.github}
             target="_blank"
           >
-            <FaGithub className="text-lg" />
-          </Button>
-        </Tooltip>
-      )}
-      {socialLinks?.linkedin && (
-        <Tooltip content="LinkedIn">
-          <Button
-            isIconOnly
-            size="sm"
-            variant="flat"
-            as={Link}
-            href={socialLinks.linkedin}
-            target="_blank"
-          >
-            <FaLinkedin className="text-lg" />
-          </Button>
-        </Tooltip>
-      )}
-      {socialLinks?.twitter && (
-        <Tooltip content="Twitter">
-          <Button
-            isIconOnly
-            size="sm"
-            variant="flat"
-            as={Link}
-            href={socialLinks.twitter}
-            target="_blank"
-          >
-            <FaTwitter className="text-lg" />
+            <GithubIcon className="text-lg" />
           </Button>
         </Tooltip>
       )}
