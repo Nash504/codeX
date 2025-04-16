@@ -5,9 +5,9 @@ import { Divider } from "@nextui-org/divider";
 
 export const footer = () => {
   const quickLinks = [
+    { name: "Home", href: "/" },
+    { name: "Projects", href: "/projects" },
     { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Portfolio", href: "/portfolio" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -70,9 +70,11 @@ export const footer = () => {
           <div className="flex justify-center gap-8 mb-8">
             <Socials />
           </div>
-          <button className="bg-gradient-to-r from-violet-600/90 to-indigo-500/90 hover:from-violet-600 hover:to-indigo-500 text-white font-medium py-2 px-6 rounded-md transition-all duration-300 shadow-md">
-            Get in Touch
-          </button>
+          <Link href="/contact">
+            <button className="bg-gradient-to-r from-violet-600/90 to-indigo-500/90 hover:from-violet-600 hover:to-indigo-500 text-white font-medium py-2 px-6 rounded-md transition-all duration-300 shadow-md">
+              Get in Touch
+            </button>
+          </Link>
         </div>
 
         {/* Bottom section with copyright */}

@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Codex.js",
+  name: "CodeX.js",
   description:
     "At Codex, we are passionate about transforming ideas into reality through the power of code. With expertise in web and Flutter app development, we bring innovation and precision to every project. Whether you're dreaming of a dynamic web application or a cutting-edge Flutter mobile app, we're here to turn your vision into a digital masterpiece.",
   navItems: [

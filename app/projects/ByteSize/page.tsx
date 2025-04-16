@@ -1,9 +1,15 @@
 import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
-
+import { ChevronLeft } from "lucide-react";
 export default function Project() {
   return (
-    <div suppressHydrationWarning className="max-w-6xl p-6 mx-auto mb-14">
+    <div
+      suppressHydrationWarning
+      className="max-w-6xl p-6 mx-auto mb-14 font-space-grotesk"
+    >
+      <Link href="/projects" className="absolute top-4 left-4 z-10 text-white">
+        <ChevronLeft size={36} /> Back to Projects
+      </Link>
       <h1 className="flex items-center text-6xl font-semibold tracking-tighter gap-9">
         Project - ByteSize
       </h1>

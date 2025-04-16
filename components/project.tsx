@@ -14,7 +14,7 @@ export default function Project() {
         {siteConfig.project.map((item, key) => (
           <Card
             key={key}
-            className="max-w-[400px] bg-violet-500/10 border-2 border-violet-500 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out backdrop-blur-sm"
+            className="max-w-[400px] bg-violet-500/10   shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out backdrop-blur-sm"
             isHoverable
           >
             <CardHeader className="flex gap-3 pb-0">
@@ -40,12 +40,12 @@ export default function Project() {
             <CardFooter className="flex justify-center pt-2">
               <Link
                 className={buttonStyles({
-                  color: "primary",
+                  color: "secondary",
                   size: "sm",
                   variant: "flat",
                   radius: "full",
                 })}
-                onClick={() => window.open(item.more)}
+                href={item.more}
               >
                 View Project
               </Link>

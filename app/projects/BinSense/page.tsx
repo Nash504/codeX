@@ -1,8 +1,13 @@
 import { Image } from "@nextui-org/image";
-
+import { ChevronLeft } from "lucide-react";
+import Link from "next/link";
 export default function Project() {
   return (
-    <div suppressHydrationWarning className="mb-14">
+    <div suppressHydrationWarning className="mb-14 font-space-grotesk">
+      <Link href="/projects" className="absolute top-4 left-4 z-10 text-white">
+        <ChevronLeft size={36} />
+        Back to Projects
+      </Link>
       <div>
         <h1 className="flex items-center py-3 text-6xl font-semibold tracking-tighter gap-9">
           Project - BinSense Waste Analytics

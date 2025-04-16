@@ -3,7 +3,7 @@ import { Link } from "@nextui-org/link";
 
 export default function Project() {
   return (
-    <div suppressHydrationWarning className=" mb-14">
+    <div suppressHydrationWarning className=" mb-14 font-space-grotesk">
       <div>
         <h1 className=" flex items-center gap-9 text-6xl font-semibold tracking-tighter">
           <Image
