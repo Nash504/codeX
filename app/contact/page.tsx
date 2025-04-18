@@ -6,7 +6,7 @@ import Form from "@/components/form"; // Fixed import - no curly braces and prop
 
 export default function ContactPage() {
   return (
-    <div className="w-full max-w-6xl mx-auto px-6 py-4 font-space-grotesk">
+    <div className="w-full sm:w-full max-w-6xl mx-auto px-6 py-4 font-space-grotesk">
       <div className="text-center mb-4">
         <h1
           className={`${title()} text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r font-thin bg-clip-text `}

@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <div className="font-space-grotesk text-white">
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center">
+      <section className="flex flex-col items-center justify-center  px-6 text-center ">
         <div className="max-w-6xl w-full ">
           <motion.h1
             className={`${title()} text-7xl md:text-8xl lg:text-9xl tracking-tight`}
