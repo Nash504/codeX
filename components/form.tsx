@@ -219,7 +219,7 @@ export default function ContactPage() {
                       <h3 className="text-lg font-semibold">Email Us</h3>
                       <Tooltip content="Click to copy" placement="bottom">
                         <p
-                          className="text-violet-600  cursor-pointer hover:underline "
+                          className="text-violet-600 sm:text-sm cursor-pointer hover:underline "
                           onClick={() => {
                             navigator.clipboard.writeText(
                               "contact@example.com"
