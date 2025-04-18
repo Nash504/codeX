@@ -61,7 +61,7 @@ export default function Home() {
           </motion.h1>
           <br />
           <motion.h2
-            className={`${title()} text-4xl md:text-5xl lg:text-6xl font-light tracking-tight`}
+            className={`${title()} text-2xl md:text-5xl sm:lg:text-6xl font-light tracking-tight`}
             variants={fadeUp}
             initial="initial"
             animate={isMounted ? "animate" : "initial"}
