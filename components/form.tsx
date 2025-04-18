@@ -210,7 +210,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold">Contact Information</h2>
               </CardHeader>
               <CardBody className="p-4 sm:p-6">
-                <div className="flex flex-col md:flex-row gap-8">
+                <div className="flex flex-col gap-8 overflow-hidden ">
                   <div className="flex items-center gap-4">
                     <div className="p-3 sm:p-4 bg-violet-500/10 rounded-full">
                       <Mail size={24} className="text-violet-600" />
@@ -219,7 +219,7 @@ export default function ContactPage() {
                       <h3 className="text-lg font-semibold">Email Us</h3>
                       <Tooltip content="Click to copy" placement="bottom">
                         <p
-                          className="text-violet-600 cursor-pointer hover:underline"
+                          className="text-violet-600  cursor-pointer hover:underline "
                           onClick={() => {
                             navigator.clipboard.writeText(
                               "contact@example.com"
