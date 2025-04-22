@@ -154,7 +154,7 @@ export default function AboutPage() {
   return (
     <div className="w-full max-w-7xl mx-auto px-4 -py-12 font-space-grotesk">
       <section className="mb-20">
-        <div className="text-center mb-12">
+        <div className="text-center -mt-16 mb-12">
           <h1
             className={`${title()} text-5xl md:text-6xl lg:text-7xl font-thin  text-white`}
           >
