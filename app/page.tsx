@@ -47,7 +47,7 @@ export default function Home() {
       <section className="flex flex-col items-center justify-center  px-6 text-center ">
         <div className="max-w-6xl w-full ">
           <motion.h1
-            className={`${title()} text-7xl md:text-8xl lg:text-9xl tracking-tight`}
+            className={`${title()} text-8xl md:text-8xl lg:text-9xl tracking-tight`}
             variants={fadeUp}
             initial="initial"
             animate={isMounted ? "animate" : "initial"}
