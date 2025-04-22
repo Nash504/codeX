@@ -14,41 +14,42 @@ export default function Project() {
         {siteConfig.project.map((item, key) => (
           <Card
             key={key}
-            className="max-w-[400px] bg-violet-500/10   shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out backdrop-blur-sm"
+            className="max-w-[400px] rounded-lg bg-gradient-to-br from-black via-gray-900 to-violet-950/70 border-2 border-violet-900/30 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out backdrop-blur-sm"
             isHoverable
           >
-            <CardHeader className="flex gap-3 pb-0">
-              <div className="flex flex-col w-full">
-                <p className="text-2xl font-mono items-center font-bold">
-                  {item.title}
-                </p>
-              </div>
-            </CardHeader>
-            <Divider className="bg-violet-500 my-2" />
-            <CardBody className="flex flex-col items-center justify-center gap-2 py-4">
+            <CardBody className="p-0 overflow-hidden">
               <Image
-                className="hover:scale-105 transition-transform duration-300 ease-in-out border-2 border-violet-500 rounded-lg shadow-lg"
-                width={350}
-                height={200}
+                className="w-full object-cover hover:scale-105 transition-transform duration-300 ease-in-out rounded-none"
                 alt={item.title}
                 src={item.img}
                 onClick={() => (window.location.href = item.more)}
-                style={{ cursor: "pointer", objectFit: "cover" }}
+                style={{
+                  cursor: "pointer",
+                  height: "220px",
+                  width: "100%",
+                  objectFit: "cover",
+                }}
               />
             </CardBody>
             <Divider className="bg-violet-500" />
             <CardFooter className="flex justify-center pt-2">
-              <Link
-                className={buttonStyles({
-                  color: "secondary",
-                  size: "sm",
-                  variant: "flat",
-                  radius: "full",
-                })}
-                href={item.more}
-              >
-                View Project
-              </Link>
+              <div className="flex flex-row w-full justify-between">
+                <p className="text-lg font-mono items-center font-bold">
+                  {item.title}
+                </p>
+                {/* 
+                <Link
+                  className={buttonStyles({
+                    color: "secondary",
+                    size: "sm",
+                    variant: "flat",
+                    radius: "full",
+                  })}
+                  href={item.more}
+                >
+                  View Project
+                </Link> */}
+              </div>
             </CardFooter>
           </Card>
         ))}

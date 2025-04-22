@@ -54,20 +54,20 @@ export default function Home() {
           >
             Code
             <span
-              className={`${title({ color: "violet" })} ml-2 text-7xl md:text-8xl lg:text-9xl tracking-tight`}
+              className={`${title({ color: "violet" })} text-7xl md:text-9xl lg:text-[10rem] tracking-tight`}
             >
               X
             </span>
           </motion.h1>
           <br />
-          <motion.h2
-            className={`${title()} text-2xl md:text-5xl sm:lg:text-6xl font-light tracking-tight`}
+          {/* <motion.h2
+            className={`${title()} font-light tracking-tight`}
             variants={fadeUp}
             initial="initial"
             animate={isMounted ? "animate" : "initial"}
           >
             Crafting Excellence
-          </motion.h2>
+          </motion.h2> */}
           <motion.div
             className="text-xl md:text-2xl text-gray-300 h-20 py-12"
             variants={fadeUp}
@@ -76,8 +76,8 @@ export default function Home() {
           >
             <Typewriter
               words={[
-                "Digital Excellence with Web and Flutter Apps",
-                "<Your Imagination, Our Code>",
+                "<Digital Excellence with Web and Flutter Apps/>",
+                "<Your Imagination, Our Code/>",
               ]}
               loop={Infinity}
               cursor
@@ -94,7 +94,7 @@ export default function Home() {
             onClick={scrollToProjects}
             aria-label="Scroll to projects"
           >
-            <p className="text-sm text-gray-400 mb-1 animate-pulse">
+            <p className="text-sm text-gray-400 mb-1 animate-pulse pt-20">
               See Projects
             </p>
             <ChevronDown size={36} className="text-violet-400/80" />
@@ -111,7 +111,7 @@ export default function Home() {
           animate={isMounted ? "animate" : "initial"}
         >
           <motion.h2
-            className="text-4xl font-bold text-center mb-12"
+            className="text-4xl font-bold text-center mb-12 pt-28 "
             variants={zoomIn}
             initial="initial"
             animate={isMounted ? "animate" : "initial"}

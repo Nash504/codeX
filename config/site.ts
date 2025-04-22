@@ -81,13 +81,13 @@ export const siteConfig = {
         "Spatial is a real-time crowd monitoring system that estimates the number of people on a bus using Bluetooth signals from nearby devices. The project aims to enhance public safety by preventing overcrowding incidents.",
       more: "/projects/Spatial",
     },
-    {
-      title: "ByteSize",
-      url: "Next.js -  Tailwind CSS",
-      description:
-        "ByteSize is an AI-powered flashcard generator that helps you study smarter. Just upload a document or paste some text, and it instantly creates flashcards using AI based on your content.",
-      more: "/projects/ByteSize",
-      img: "https://i.imgur.com/QXMp469.jpeg",
-    },
+    // {
+    //   title: "ByteSize",
+    //   url: "Next.js -  Tailwind CSS",
+    //   description:
+    //     "ByteSize is an AI-powered flashcard generator that helps you study smarter. Just upload a document or paste some text, and it instantly creates flashcards using AI based on your content.",
+    //   more: "/projects/ByteSize",
+    //   img: "https://i.imgur.com/QXMp469.jpeg",
+    // },
   ],
 };
