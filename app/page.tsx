@@ -97,7 +97,7 @@ export default function Home() {
             <p className="text-sm text-gray-400 mb-1 animate-pulse pt-20">
               See Projects
             </p>
-            <ChevronDown size={36} className="text-violet-400/80 mb-8" />
+            <ChevronDown size={36} className="text-violet-400/80 mb-36" />
           </motion.div>
         </div>
       </section>
