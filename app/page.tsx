@@ -69,7 +69,7 @@ export default function Home() {
             Crafting Excellence
           </motion.h2> */}
           <motion.div
-            className="text-xl md:text-2xl text-gray-300 h-20 py-12"
+            className="text-2xl md:text-3xl text-gray-300 h-20 py-12"
             variants={fadeUp}
             initial="initial"
             animate={isMounted ? "animate" : "initial"}
