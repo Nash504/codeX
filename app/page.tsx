@@ -89,7 +89,7 @@ export default function Home() {
           </motion.div>
           <motion.div
             className="mt-10 flex flex-col items-center cursor-pointer"
-            animate={{ y: [0, 10, 0] }}
+            animate={{ y: [0, 30, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
             onClick={scrollToProjects}
             aria-label="Scroll to projects"
@@ -97,7 +97,7 @@ export default function Home() {
             <p className="text-sm text-gray-400 mb-1 animate-pulse pt-20">
               See Projects
             </p>
-            <ChevronDown size={36} className="text-violet-400/80" />
+            <ChevronDown size={36} className="text-violet-400/80 mb-8" />
           </motion.div>
         </div>
       </section>
@@ -111,7 +111,7 @@ export default function Home() {
           animate={isMounted ? "animate" : "initial"}
         >
           <motion.h2
-            className="text-4xl font-bold text-center mb-12 pt-28 "
+            className="text-4xl font-bold text-center mb-12  "
             variants={zoomIn}
             initial="initial"
             animate={isMounted ? "animate" : "initial"}
