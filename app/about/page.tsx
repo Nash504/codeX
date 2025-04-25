@@ -36,7 +36,7 @@ const TeamMember = ({
       <div className="flex justify-center w-full">
         <Image
           radius="full"
-          className="w-fill h-52 object-fill "
+          className=" w-40 h-40 object-fill "
           src={image}
           alt={alt}
         />
@@ -80,7 +80,7 @@ const teamMembers = [
     },
   },
   {
-    name: "Deion Dsouza",
+    name: "Deion D'souza",
     role: "Frontend Developer - React & NextJS",
     image: "deion.jpeg",
     alt: "Deion",
@@ -90,7 +90,7 @@ const teamMembers = [
     },
   },
   {
-    name: "Roldan Dsouza",
+    name: "Roldan D'souza",
     role: "Backend Developer - Javascript & Python",
     image: "Roldan.jpg",
     alt: "Roldan",
