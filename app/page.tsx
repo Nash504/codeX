@@ -73,7 +73,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="hero-section" className="flex flex-col items-center justify-center min-h-screen px-6 text-center pt-20">
-        <div className="max-w-6xl w-full -mt-96">
+        <div className="max-w-6xl w-full -mt-72">
           <motion.h1
             className={`${title()} text-8xl md:text-8xl lg:text-8xl tracking-tight `}
             variants={fadeUp}
@@ -82,7 +82,7 @@ export default function Home() {
           >
             Code
             <span
-              className={`${title({ color: "violet" })} text-6xl md:text-8xl lg:text-[10rem] tracking-tight`}
+              className={`${title({ color: "violet" })} text-6xl md:text-8xl lg:text-[8rem] tracking-tight`}
             >
               X
             </span>
@@ -115,12 +115,13 @@ export default function Home() {
             initial="initial"
             animate={isMounted ? "animate" : "initial"}
           >
-            <button 
-              onClick={() => scrollToSection("projects-section")} 
-              className="bg-violet-600 hover:bg-violet-700 text-white font-bold py-3 px-8 rounded-full transition-colors"
-            >
-              View Our Work
-            </button>
+          <button 
+  onClick={() => scrollToSection("projects-section")} 
+  className="border border-violet-600 text-violet-600 hover:bg-violet-600/50 hover:text-white font-bold py-3 px-8 rounded-full transition-colors"
+>
+  View Our Work
+</button>
+
           </motion.div>
           
           <motion.div

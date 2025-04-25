@@ -83,7 +83,7 @@ export default function Form() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
       {/* Contact Form Card */}
       <div className="w-full order-2 md:order-1">
-        <Card className="shadow-md border-2 border-violet-500/10 w-full h-full">
+        <Card className="bg-black/50 shadow-md border-2 border-violet-500/10 w-full h-full">
           <CardHeader className="pb-0 flex-col items-start pt-6 px-4 sm:px-6">
             <h2 className="text-xl sm:text-2xl font-bold">Send us a message</h2>
             <p className="text-default-500 text-sm sm:text-base">We'll get back to you soon.</p>
@@ -205,7 +205,7 @@ export default function Form() {
 
       {/* Contact Information Card */}
       <div className="w-full order-1 md:order-2">
-        <Card className="shadow-md border-2 border-violet-500/10 w-full">
+        <Card className="bg-black/50 shadow-md border-2 border-violet-500/10 w-full">
           <CardHeader className="pb-0 pt-6 px-4 sm:px-6">
             <h2 className="text-xl sm:text-2xl font-bold">Contact Information</h2>
           </CardHeader>

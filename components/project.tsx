@@ -14,7 +14,7 @@ export default function Project() {
         {siteConfig.project.map((item, key) => (
           <Card
             key={key}
-            className="max-w-[400px] rounded-lg bg-gradient-to-br from-black via-gray-900 to-violet-950/70 border-2 border-violet-900/30 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out backdrop-blur-sm"
+            className="max-w-[400px] rounded-lg0/70 bg-black border-2 border-black shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out backdrop-blur-sm"
             isHoverable
           >
             <CardBody className="p-0 overflow-hidden">
@@ -31,7 +31,7 @@ export default function Project() {
                 }}
               />
             </CardBody>
-            <Divider className="bg-violet-500" />
+            <Divider className="bg-black/50" />
             <CardFooter className="flex justify-center pt-2">
               <div className="flex flex-row w-full justify-between">
                 <p className="text-lg font-mono items-center font-bold">

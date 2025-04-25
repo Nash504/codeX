@@ -27,7 +27,7 @@ const TeamMember = ({
   image,
   alt,
   socialLinks,
-  cardColor = "bg-gradient-to-br from-black via-gray-900 to-violet-950/70 border-2 border-violet-900/30",
+  cardColor = "bg-black/50",
 }: TeamMemberProps) => (
   <Card
     className={` hover:shadow-xl transition-all duration-300 overflow-hidden font-mono ${cardColor}`}
@@ -43,7 +43,7 @@ const TeamMember = ({
       </div>
     </CardHeader>
     <CardBody className="text-center py-4">
-      <Divider className="bg-violet-500 mb-2" />
+      <Divider className="bg-black mb-2" />
       <h3 className="text-xl font-bold">{name}</h3>
       <p className="text-default-500 text-sm mb-2 font-semibold">{role}</p>
     </CardBody>
