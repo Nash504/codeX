@@ -1,25 +1,21 @@
-// page.tsx
 "use client";
 
 import { title } from "@/components/primitives";
-import Form from "@/components/form"; // Fixed import - no curly braces and proper capitalization
+import Form from "@/components/form";
 
 export default function ContactPage() {
   return (
-    <div className="w-full sm:w-full max-w-6xl mx-auto px-6 py-4 font-space-grotesk">
-      <div className="text-center  -mt-16  mb-4">
-        <h1
-          className={`${title()} text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r font-thin bg-clip-text `}
-        >
+    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 font-space-grotesk">
+      <div className="text-center mb-8 sm:mb-12 -mt-24">
+        <h1 className={`${title()} text-4xl sm:text-5xl md:text-6xl font-thin bg-gradient-to-r bg-clip-text`}>
           Contact Us
         </h1>
-        <p className="text-default-500 max-w-2xl mx-auto mt-4 mb-16">
+        <p className="text-default-500 max-w-2xl mx-auto mt-4 mb-8 sm:mb-12 px-4">
           We'd love to hear from you. Fill out the form below or use our contact
           information to get in touch.
         </p>
       </div>
-      <Form />{" "}
-      {/* Form component placed outside the text-center div for proper alignment */}
+      <Form />
     </div>
   );
 }

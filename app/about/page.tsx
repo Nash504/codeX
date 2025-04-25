@@ -145,7 +145,7 @@ export default function AboutPage() {
       <section className="mb-20">
         <div className="text-center -mt-16 mb-12">
           <h1
-            className={`${title()} text-5xl md:text-6xl lg:text-7xl font-thin  text-white`}
+            className={`${title()} text-4xl sm:text-5xl md:text-6xl font-thin bg-gradient-to-r bg-clip-text`}
           >
             Meet Our Team
           </h1>

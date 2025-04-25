@@ -2,7 +2,6 @@ import React from "react";
 import Socials from "@/components/Socials";
 import Link from "next/link";
 import { Divider } from "@nextui-org/divider";
-
 export const footer = () => {
   const quickLinks = [
     { name: "Home", href: "/" },
@@ -71,7 +70,7 @@ export const footer = () => {
             <Socials />
           </div>
           <Link href="/contact">
-            <button className="bg-gradient-to-r from-violet-600/90 to-indigo-500/90 hover:from-violet-600 hover:to-indigo-500 text-white font-medium py-2 px-6 rounded-md transition-all duration-300 shadow-md">
+<button className="bg-gradient-to-r from-violet-600/90 to-indigo-500/90 hover:from-violet-600 hover:to-indigo-500 text-white font-medium py-2 px-6 rounded-md transition-transform duration-300 shadow-md hover:scale-105 active:scale-95">
               Get in Touch
             </button>
           </Link>

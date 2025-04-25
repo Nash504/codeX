@@ -1,15 +1,14 @@
 "use client";
 
-import { title } from "@/components/primitives";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import { Mail, Phone, Send, MapPin } from "lucide-react";
 import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
-import { sendEmail } from "../serverAction/sendMail";
 import { useState } from "react";
 import { Tooltip } from "@nextui-org/tooltip";
+import { sendEmail } from "../serverAction/sendMail";
 
 const ContactFormSchema = z.object({
   name: z
@@ -21,7 +20,7 @@ const ContactFormSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
-export default function ContactPage() {
+export default function Form() {
   const [formStatus, setFormStatus] = useState<{
     success?: boolean;
     message?: string;
@@ -81,206 +80,203 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="w-full px-4 py-8 font-space-grotesk">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 w-full">
-          <div className="w-full">
-            <Card className="shadow-md border-2 border-violet-500/10 w-full mb-6 lg:mb-0">
-              <CardHeader className="pb-0 flex-col items-start pt-6 px-4 sm:px-6">
-                <h2 className="text-2xl font-bold">Send us a message</h2>
-                <p className="text-default-500">We'll get back to you soon.</p>
-              </CardHeader>
-              <CardBody className="py-5 px-4 sm:px-6">
-                <form
-                  className="flex flex-col gap-5 w-full"
-                  onSubmit={handleSubmit(onSubmit)}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
+      {/* Contact Form Card */}
+      <div className="w-full order-2 md:order-1">
+        <Card className="shadow-md border-2 border-violet-500/10 w-full h-full">
+          <CardHeader className="pb-0 flex-col items-start pt-6 px-4 sm:px-6">
+            <h2 className="text-xl sm:text-2xl font-bold">Send us a message</h2>
+            <p className="text-default-500 text-sm sm:text-base">We'll get back to you soon.</p>
+          </CardHeader>
+          <CardBody className="py-5 px-4 sm:px-6">
+            <form
+              className="flex flex-col gap-4 sm:gap-5 w-full"
+              onSubmit={handleSubmit(onSubmit)}
+            >
+              <div className="w-full">
+                <Input
+                  type="text"
+                  label="Name"
+                  placeholder="Enter your name"
+                  variant="bordered"
+                  radius="sm"
+                  isInvalid={!!errors.name}
+                  errorMessage={errors.name?.message}
+                  {...register("name", { required: "Name is required" })}
+                  classNames={{
+                    inputWrapper: "w-full",
+                    input: "w-full",
+                  }}
+                  fullWidth
+                />
+              </div>
+
+              <div className="w-full">
+                <Input
+                  type="email"
+                  label="Email"
+                  placeholder="Enter your email"
+                  variant="bordered"
+                  radius="sm"
+                  isInvalid={!!errors.email}
+                  errorMessage={errors.email?.message}
+                  {...register("email", { required: "Email is required" })}
+                  classNames={{
+                    inputWrapper: "w-full",
+                    input: "w-full",
+                  }}
+                  fullWidth
+                />
+              </div>
+
+              <div className="w-full">
+                <Input
+                  type="tel"
+                  label="Phone (optional)"
+                  placeholder="Enter your phone number"
+                  variant="bordered"
+                  radius="sm"
+                  {...register("phone")}
+                  classNames={{
+                    inputWrapper: "w-full",
+                    input: "w-full",
+                  }}
+                  fullWidth
+                />
+              </div>
+
+              <div className="w-full">
+                <Textarea
+                  label="Message"
+                  placeholder="How can we help you?"
+                  variant="bordered"
+                  radius="sm"
+                  minRows={3}
+                  maxRows={6}
+                  isInvalid={!!errors.message}
+                  errorMessage={errors.message?.message}
+                  {...register("message", {
+                    required: "Message is required",
+                  })}
+                  classNames={{
+                    inputWrapper: "w-full",
+                    input: "w-full",
+                  }}
+                  fullWidth
+                />
+              </div>
+
+              {formStatus.message && (
+                <div
+                  className={`p-3 rounded-md w-full text-sm ${
+                    formStatus.success
+                      ? "bg-green-100 text-green-700"
+                      : "bg-red-100 text-red-700"
+                  }`}
                 >
-                  <div className="w-full">
-                    <Input
-                      type="text"
-                      label="Name"
-                      placeholder="Enter your name"
-                      variant="bordered"
-                      radius="sm"
-                      isInvalid={!!errors.name}
-                      errorMessage={errors.name?.message}
-                      {...register("name", { required: "Name is required" })}
-                      classNames={{
-                        inputWrapper: "w-full",
-                        input: "w-full",
-                      }}
-                      fullWidth
-                    />
-                  </div>
-
-                  <div className="w-full">
-                    <Input
-                      type="email"
-                      label="Email"
-                      placeholder="Enter your email"
-                      variant="bordered"
-                      radius="sm"
-                      isInvalid={!!errors.email}
-                      errorMessage={errors.email?.message}
-                      {...register("email", { required: "Email is required" })}
-                      classNames={{
-                        inputWrapper: "w-full",
-                        input: "w-full",
-                      }}
-                      fullWidth
-                    />
-                  </div>
-
-                  <div className="w-full">
-                    <Input
-                      type="tel"
-                      label="Phone (optional)"
-                      placeholder="Enter your phone number"
-                      variant="bordered"
-                      radius="sm"
-                      {...register("phone")}
-                      classNames={{
-                        inputWrapper: "w-full",
-                        input: "w-full",
-                      }}
-                      fullWidth
-                    />
-                  </div>
-
-                  <div className="w-full">
-                    <Textarea
-                      label="Message"
-                      placeholder="How can we help you?"
-                      variant="bordered"
-                      radius="sm"
-                      minRows={4}
-                      isInvalid={!!errors.message}
-                      errorMessage={errors.message?.message}
-                      {...register("message", {
-                        required: "Message is required",
-                      })}
-                      classNames={{
-                        inputWrapper: "w-full",
-                        input: "w-full",
-                      }}
-                      fullWidth
-                    />
-                  </div>
-
-                  {formStatus.message && (
-                    <div
-                      className={`p-3 rounded-md w-full ${
-                        formStatus.success
-                          ? "bg-green-100 text-green-700"
-                          : "bg-red-100 text-red-700"
-                      }`}
-                    >
-                      {formStatus.message}
-                    </div>
-                  )}
-
-                  <Button
-                    disabled={isSubmitting}
-                    color="secondary"
-                    className="mt-2 bg-violet-600 text-white font-medium py-6 w-full"
-                    type="submit"
-                    size="lg"
-                    radius="sm"
-                  >
-                    {isSubmitting ? (
-                      <div className="flex items-center justify-center w-full">
-                        <div className="animate-spin rounded-full h-4 w-4 border-t-2 border-b-2 border-white mr-2"></div>
-                        Sending...
-                      </div>
-                    ) : (
-                      <>
-                        <Send size={18} className="mr-2" />
-                        Send Message
-                      </>
-                    )}
-                  </Button>
-                </form>
-              </CardBody>
-            </Card>
-          </div>
-
-          <div className="w-full">
-            <Card className=" overflow-auto shadow-md border-2 border-violet-500/10 mb-6 w-full">
-              <CardHeader className="pb-0 pt-6 px-4 sm:px-6">
-                <h2 className="text-2xl font-bold">Contact Information</h2>
-              </CardHeader>
-              <CardBody className="p-4 sm:p-6">
-                <div className="flex flex-col gap-8 overflow-hidden ">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 sm:p-4 bg-violet-500/10 rounded-full">
-                      <Mail size={24} className="text-violet-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold">Email Us</h3>
-                      <Tooltip content="Click to copy" placement="bottom">
-                        <p
-                          className="text-violet-600 sm:text-sm cursor-pointer hover:underline "
-                          onClick={() => {
-                            navigator.clipboard.writeText(
-                              "contact@example.com"
-                            );
-                            setFormStatus({
-                              success: true,
-                              message: "Email copied to clipboard!",
-                            });
-                            setTimeout(() => setFormStatus({}), 2000);
-                          }}
-                        >
-                          contact@example.com
-                        </p>
-                      </Tooltip>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 sm:p-4 bg-violet-500/10 rounded-full">
-                      <Phone size={24} className="text-violet-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold">Call Us</h3>
-                      <Tooltip content="Click to copy" placement="bottom">
-                        <p
-                          className="text-violet-600 cursor-pointer hover:underline"
-                          onClick={() => {
-                            navigator.clipboard.writeText("(555) 123-4567");
-                            setFormStatus({
-                              success: true,
-                              message: "Phone number copied to clipboard!",
-                            });
-                            setTimeout(() => setFormStatus({}), 2000);
-                          }}
-                        >
-                          (555) 123-4567
-                        </p>
-                      </Tooltip>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 sm:p-4 bg-violet-500/10 rounded-full">
-                      <MapPin size={24} className="text-violet-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold">Office</h3>
-                      <p className="text-default-600">
-                        123 Design Street
-                        <br />
-                        San Francisco, CA 94103
-                        <br />
-                        United States
-                      </p>
-                    </div>
-                  </div>
+                  {formStatus.message}
                 </div>
-              </CardBody>
-            </Card>
-          </div>
-        </div>
+              )}
+
+              <Button
+                disabled={isSubmitting}
+                color="secondary"
+                className="mt-2 bg-violet-600 text-white font-medium py-5 sm:py-6 w-full"
+                type="submit"
+                size="lg"
+                radius="sm"
+              >
+                {isSubmitting ? (
+                  <div className="flex items-center justify-center w-full">
+                    <div className="animate-spin rounded-full h-4 w-4 border-t-2 border-b-2 border-white mr-2"></div>
+                    Sending...
+                  </div>
+                ) : (
+                  <>
+                    <Send size={16} className="mr-2" />
+                    Send Message
+                  </>
+                )}
+              </Button>
+            </form>
+          </CardBody>
+        </Card>
+      </div>
+
+      {/* Contact Information Card */}
+      <div className="w-full order-1 md:order-2">
+        <Card className="shadow-md border-2 border-violet-500/10 w-full">
+          <CardHeader className="pb-0 pt-6 px-4 sm:px-6">
+            <h2 className="text-xl sm:text-2xl font-bold">Contact Information</h2>
+          </CardHeader>
+          <CardBody className="p-4 sm:p-6">
+            <div className="flex flex-col gap-6 sm:gap-8">
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-violet-500/10 rounded-full flex-shrink-0">
+                  <Mail size={20} className="text-violet-600" />
+                </div>
+                <div>
+                  <h3 className="text-base sm:text-lg font-semibold">Email Us</h3>
+                  <Tooltip content="Click to copy" placement="bottom">
+                    <p
+                      className="text-violet-600 text-sm sm:text-base cursor-pointer hover:underline"
+                      onClick={() => {
+                        navigator.clipboard.writeText("contact@example.com");
+                        setFormStatus({
+                          success: true,
+                          message: "Email copied to clipboard!",
+                        });
+                        setTimeout(() => setFormStatus({}), 2000);
+                      }}
+                    >
+                      contact@example.com
+                    </p>
+                  </Tooltip>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-violet-500/10 rounded-full flex-shrink-0">
+                  <Phone size={20} className="text-violet-600" />
+                </div>
+                <div>
+                  <h3 className="text-base sm:text-lg font-semibold">Call Us</h3>
+                  <Tooltip content="Click to copy" placement="bottom">
+                    <p
+                      className="text-violet-600 text-sm sm:text-base cursor-pointer hover:underline"
+                      onClick={() => {
+                        navigator.clipboard.writeText("(555) 123-4567");
+                        setFormStatus({
+                          success: true,
+                          message: "Phone number copied to clipboard!",
+                        });
+                        setTimeout(() => setFormStatus({}), 2000);
+                      }}
+                    >
+                      (555) 123-4567
+                    </p>
+                  </Tooltip>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-violet-500/10 rounded-full flex-shrink-0">
+                  <MapPin size={20} className="text-violet-600" />
+                </div>
+                <div>
+                  <h3 className="text-base sm:text-lg font-semibold">Office</h3>
+                  <p className="text-default-600 text-sm sm:text-base">
+                    123 Design Street
+                    <br />
+                    San Francisco, CA 94103
+                    <br />
+                    United States
+                  </p>
+                </div>
+              </div>
+            </div>
+          </CardBody>
+        </Card>
       </div>
     </div>
   );
