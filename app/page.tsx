@@ -36,7 +36,7 @@ export default function Home() {
     setIsMounted(true);
   }, []);
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id:string) => {
     const section = document.getElementById(id);
     section?.scrollIntoView({ behavior: "smooth" });
   };
