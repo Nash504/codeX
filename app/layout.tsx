@@ -46,9 +46,10 @@ export default function RootLayout({
           <div className="relative flex flex-col min-h-screen bg-gradient-to-br from-black via-gray-900 to-violet-950/70">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-900/5 via-transparent to-transparent pointer-events-none"></div>
             <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow relative z-10">
-              {children}
-            </main>
+            <main className="pt-16 px-0 flex-grow relative z-10">
+  {children}
+</main>
+
             <Footer />
           </div>
         </Providers>
