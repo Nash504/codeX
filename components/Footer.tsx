@@ -46,14 +46,8 @@ export const footer = () => {
               Contact Us
             </h3>
             <p className="text-gray-400 mb-2">hello@codex.com</p>
-            <p className="text-gray-400 mb-4">+1 (555) 123-4567</p>
-            <p className="text-gray-400 text-sm">
-              123 Tech Plaza,
-              <br />
-              Innovation District,
-              <br />
-              San Francisco, CA 94103
-            </p>
+            <p className="text-gray-400 mb-4"> +91 99018 81652</p>
+           
           </div>
         </div>
 
@@ -82,19 +76,7 @@ export const footer = () => {
             &copy; {new Date().getFullYear()} CodeX. All rights reserved.
           </p>
           <div className="flex justify-center gap-4 mt-3 text-xs text-gray-600">
-            <Link
-              href="/privacy"
-              className="hover:text-gray-400 transition-colors duration-300"
-            >
-              Privacy Policy
-            </Link>
-            <span>|</span>
-            <Link
-              href="/terms"
-              className="hover:text-gray-400 transition-colors duration-300"
-            >
-              Terms of Service
-            </Link>
+           
           </div>
         </div>
       </div>

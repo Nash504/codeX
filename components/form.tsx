@@ -221,7 +221,7 @@ export default function Form() {
                     <p
                       className="text-violet-600 text-sm sm:text-base cursor-pointer hover:underline"
                       onClick={() => {
-                        navigator.clipboard.writeText("contact@example.com");
+                        navigator.clipboard.writeText("codexcon.inc@gmail.com");
                         setFormStatus({
                           success: true,
                           message: "Email copied to clipboard!",
@@ -229,7 +229,7 @@ export default function Form() {
                         setTimeout(() => setFormStatus({}), 2000);
                       }}
                     >
-                      contact@example.com
+                    codexcon.inc@gmail.com
                     </p>
                   </Tooltip>
                 </div>
@@ -245,7 +245,7 @@ export default function Form() {
                     <p
                       className="text-violet-600 text-sm sm:text-base cursor-pointer hover:underline"
                       onClick={() => {
-                        navigator.clipboard.writeText("(555) 123-4567");
+                        navigator.clipboard.writeText("+91 99018 81652");
                         setFormStatus({
                           success: true,
                           message: "Phone number copied to clipboard!",
@@ -253,27 +253,13 @@ export default function Form() {
                         setTimeout(() => setFormStatus({}), 2000);
                       }}
                     >
-                      (555) 123-4567
+                     +91 99018 81652
                     </p>
                   </Tooltip>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-violet-500/10 rounded-full flex-shrink-0">
-                  <MapPin size={20} className="text-violet-600" />
-                </div>
-                <div>
-                  <h3 className="text-base sm:text-lg font-semibold">Office</h3>
-                  <p className="text-default-600 text-sm sm:text-base">
-                    123 Design Street
-                    <br />
-                    San Francisco, CA 94103
-                    <br />
-                    United States
-                  </p>
-                </div>
-              </div>
+            
             </div>
           </CardBody>
         </Card>
