@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
-import { Mail, Phone, Send, MapPin } from "lucide-react";
+import { Mail, Phone, Send, MessageCircle } from "lucide-react";
 import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { z } from "zod";
@@ -9,7 +9,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { Tooltip } from "@nextui-org/tooltip";
 import { sendEmail } from "../serverAction/sendMail";
-
+import { Link } from "@nextui-org/link";
 const ContactFormSchema = z.object({
   name: z
     .string()
@@ -257,8 +257,22 @@ export default function Form() {
                     </p>
                   </Tooltip>
                 </div>
+              
               </div>
 
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-violet-500/10 rounded-full flex-shrink-0">
+                  <MessageCircle size={20} className="text-violet-600" />
+                </div>
+                <div>
+                  <Link href="https://wa.me/919901881652" isExternal className="flex items-center gap-2">
+                  <h3 className="text-violet-600 text-sm sm:text-base cursor-pointer hover:underline">Message us on Whatsapp</h3> 
+                  </Link>
+                </div>
+              
+              </div>
+              
+             
             
             </div>
           </CardBody>
