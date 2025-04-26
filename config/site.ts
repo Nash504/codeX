@@ -47,6 +47,7 @@ export const siteConfig = {
     twitter: "https://twitter.com/Deion_Dz",
     discord: "https://discord.gg/2FSahA5JGX",
     sponsor: "https://pay.upilink.in/pay/deiondsouza12@okaxis?am=10",
+    whatsapp:"whatsapp://send?phone=+91 99018 81652"
   },
   project: [
     {

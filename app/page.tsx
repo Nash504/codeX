@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, Code, Zap, Send } from "lucide-react";
+import { ChevronDown, Code, Zap, Send ,ScrollText ,Unplug} from "lucide-react";
 import dynamic from "next/dynamic";
 
 import { title } from "@/components/primitives";
@@ -52,6 +52,17 @@ export default function Home() {
       icon: <Zap size={24} />,
       title: "Flutter Apps",
       description: "Cross-platform mobile applications with native feel."
+    },
+    {
+      icon:<ScrollText size={24} />,
+      title: "WordPress Development",
+      description: "Custom WordPress sites tailored to your needs."
+    }
+    ,
+    {
+      icon :<Unplug size={24} />,
+      title: "Real-Time WebSockets and Backend Solutions",
+      description: "Reliable backends and real-time WebSocket services"
     },
   ];
 
