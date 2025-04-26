@@ -10,6 +10,7 @@ import { useState } from "react";
 import { Tooltip } from "@nextui-org/tooltip";
 import { sendEmail } from "../serverAction/sendMail";
 import { Link } from "@nextui-org/link";
+import { siteConfig } from "@/config/site";
 const ContactFormSchema = z.object({
   name: z
     .string()
@@ -265,7 +266,7 @@ export default function Form() {
                   <MessageCircle size={20} className="text-violet-600" />
                 </div>
                 <div>
-                  <Link href="https://wa.me/919901881652" isExternal className="flex items-center gap-2">
+                  <Link href={siteConfig.links.whatsapp} isExternal className="flex items-center gap-2">
                   <h3 className="text-violet-600 text-sm sm:text-base cursor-pointer hover:underline">Message us on Whatsapp</h3> 
                   </Link>
                 </div>
