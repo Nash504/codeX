@@ -52,7 +52,7 @@ export const siteConfig = {
   project: [
     {
       title: "BinSense Waste Analytics",
-      img: "https://www.upwork.com/att/download/portfolio/persons/uid/964929488448684032/profile/projects/files/84851d89-9003-43f7-b631-f460891e90ad",
+      img: "binsense.png",
       url: "Next.js - Supabase - Gemini AI",
       description:
         "BinSense is an AI-powered waste management system that analyzes waste metrics and categorizes waste types, including e-waste, toxic waste, wet waste, and dry waste. It integrates with IoT waste bins to automate data collection and segregation, aiming to reduce landfill waste and enhance sustainability practices.",
