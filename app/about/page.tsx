@@ -71,7 +71,7 @@ const TeamMember = ({
 const teamMembers = [
   {
     name: "Jonathan Correa ",
-    role: "Python - C developer",
+    role: "Backend Developer - Javascript & Python",
     image: "john.jpg",
     alt: "Johnathan",
     socialLinks: {
