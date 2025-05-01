@@ -3,16 +3,16 @@ import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 export default function Project() {
   return (
-    <div suppressHydrationWarning className="mb-14 font-space-grotesk">
+    <div suppressHydrationWarning className="max-w-6xl p-6 mx-auto mb-14 font-space-grotesk">
       <Link href="/projects" className="absolute top-4 left-4 z-10 text-white">
         <ChevronLeft size={36} />
         Back to Projects
       </Link>
       <div>
-        <h1 className="flex items-center py-3 text-6xl font-semibold tracking-tighter gap-9">
+        <h1 className="flex items-center text-6xl font-semibold tracking-tighter gap-9">
           Project - BinSense Waste Analytics
         </h1>
-        <div className="mx-auto ">
+        <div className="p-5 mx-auto ">
           <Image
             alt="BinSense Dashboard"
             src="https://www.upwork.com/att/download/portfolio/persons/uid/964929488448684032/profile/projects/files/84851d89-9003-43f7-b631-f460891e90ad"
